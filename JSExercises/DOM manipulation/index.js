@@ -1,0 +1,1 @@
+document.getElementById('example').innerHTML = 'DOM manipulation with JS!';
