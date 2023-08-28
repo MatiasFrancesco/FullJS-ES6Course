@@ -52,8 +52,7 @@ console.log(c);
 
 */
 
-/*collect method*/
-
+/*collect method
 let a = [20, 30, 40];
 let b = [10, ...a, 50];
 console.log(b);
@@ -70,6 +69,44 @@ function addPeople(...take_from_form){
 
 addPeople(`alice`, `milke`);
 console.log(people);
+*/
 
 
 
+
+
+/* Destructuring Assignment on Arrays and Object */
+
+
+
+/*
+//with arrays
+
+let z = [4,5,6];
+//let four = z[0];
+//let five = z[1];
+let [four,five] = z
+console.log(four, five);
+
+
+let animals = [`Simba`, `Zazu`, `Ed`];
+let [lion, bird] = animals;
+console.log(lion, bird);
+
+
+//with object
+
+let king = {name: "mufasa",  kids: 1};
+//let name = king.name;
+//let kids = king.kids;
+
+
+let {name, kids} = king; //NB: use the same variable name in the object
+
+
+//you can use it if you want to declare variables first
+//let name, kids;
+//({name, kids} = king)
+
+console.log(name, kids);  
+*/
