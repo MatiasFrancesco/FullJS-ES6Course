@@ -110,3 +110,42 @@ let {name, kids} = king; //NB: use the same variable name in the object
 
 console.log(name, kids);  
 */
+
+
+/* Arrow Function 
+
+
+setTimeout(function(){  //anonymus function
+    console.log("Woohoo!");
+},3000);
+
+
+setTimeout(()=>{
+    console.log("Woohoo! Arrow Function!");
+},5000);
+
+*/
+
+/* Map and Filter Method 
+
+let values = [20, 30, 40];
+
+//method 1
+//let double = (n) => {
+//    return n*2;
+//}
+//let doubled = values.map(double);
+
+
+//method 2 (better, you save soo much line)
+let doubled = values.map((n) => n * 2);
+console.log(doubled);
+
+
+
+//use of Filter
+let points = [7, 16, 21, 4, 3];
+let highScores = points.filter((n) => n > 15);
+console.log(highScores);
+
+*/
