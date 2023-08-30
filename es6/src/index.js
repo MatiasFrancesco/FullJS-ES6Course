@@ -124,6 +124,13 @@ let highScores = points.filter((n) => n > 15);
 
 /* IMPORT-EXPORT MODULES */
 import { fellowship } from "./fellowship";
-
 console.log(fellowship);
 
+
+import Lion from "./lion";
+let animal = new Lion("Mufasa", 10.5, "white");
+animal.Hello();
+
+
+
+  

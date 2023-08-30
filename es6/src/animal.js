@@ -8,5 +8,4 @@ class Animal{
     }
 }
 
-let king = new Animal("Mufasa", 4.5);
-console.log(king);
+export default Animal;
