@@ -127,9 +127,6 @@ import { fellowship } from "./fellowship";
 console.log(fellowship);
 
 
-import Lion from "./lion";
-let animal = new Lion("Mufasa", 10.5, "white");
-animal.Hello();
 
 
 
