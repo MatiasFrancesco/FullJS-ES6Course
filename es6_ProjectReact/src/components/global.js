@@ -1,23 +1,39 @@
-import React, { Component } from 'react';
-import { FormGroup, FormControl, InputGroup } from 'react-bootstrap';
+import React, { useState } from 'react';
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 
 
-class Global extends Component {
-    render() {
-        return (
-            //<div>The Global App Component!</div>
-            <div>
-                <h2>Book Explorer!</h2>
-                <FormGroup>
-                    <InputGroup>
-                        <FormControl type='text' placeholder='search for a book' />
-                        <FormControl type='button'/>
-                    </InputGroup>
+function SearchBookForm() {
+    const [searchBook, setSearchBook] = useState('');
 
-                </FormGroup>
-            </div>
-        )
-    }
+    return (
+        <div>
+            <h2>Book Explorer 2!</h2>
+            <Form>
+                <Form.Group>
+                    <Form.Control
+                        type='text'
+                        placeholder='Search a book'
+                        onChange={e => setSearchBook(e.target.value)}
+                        /*onKeyDown={e => {
+                            if (e.key === 'Enter') {
+                                console.log(`search ${searchBook}`)
+                            }
+                        }}*/
+                    />
+                    <Button onClick={() => {
+                                console.log(`search ${searchBook}`)
+                            }} 
+                            type='button'>
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </Button>
+                </Form.Group>
+            </Form>
+        </div>
+    )
 }
-export default Global;
+
+export default SearchBookForm;
