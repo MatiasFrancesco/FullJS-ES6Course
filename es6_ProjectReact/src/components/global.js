@@ -7,11 +7,20 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 
 function SearchBookForm() {
+    //searchBook is my query
     const [searchBook, setSearchBook] = useState('');
+    
+    function search(){
+        //console.log(`search ${searchBook}`)
+        const BASE_URL ='https://www.googleapis.com/books/v1/volumes?q='
+        fetch(`${BASE_URL}${searchBook}`, {method: 'GET'})
+            .then(response => response.json())
+            .then(json => console.log(json))
+    }
 
     return (
         <div>
-            <h2 id='title'>Book Explorer 2!</h2>
+            <h2 id='title'>Book Explorer 1!</h2>
             <Form className='searchForm'>
                 <Form.Group>
                     <Form.Control
@@ -26,9 +35,7 @@ function SearchBookForm() {
                         }}*/
                     />
                     <Button 
-                        onClick={() => {
-                            console.log(`search ${searchBook}`)
-                        }}
+                        onClick={() => search()}
                         className='sf-subBtn'
 
                     >
