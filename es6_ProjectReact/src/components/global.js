@@ -19,8 +19,8 @@ class Global extends React.Component {
         //console.log(`search ${this.state.query}`);
         const BASE_URL = "https://www.googleapis.com/books/v1/volumes?q="
         fetch(`${BASE_URL}${this.state.query}`, { methods: "GET" })
-            .then(response => response.json())
-            .then(json => this.setState({ items: json.items }) )
+            .then(response => response.json()) 
+            .then(json => this.setState( { items: json.items }) )
         
 
     }
